@@ -89,3 +89,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.business-title {
+  font-family: 'Special Elite', monospace;
+  font-size: 2.5rem;
+  color: white; /* Fill color */
+  -webkit-text-stroke: 1.5px #4EFB00; /* Kawasaki Green outline */
+  text-align: center;
+  margin-bottom: 20px;
+}
