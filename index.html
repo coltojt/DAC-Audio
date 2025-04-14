@@ -94,6 +94,7 @@
     nav a:hover {
       background-color: var(--accent);
       color: white;
+      animation: glowPulse 1.2s infinite ease-in-out;
     }
 
     main {
@@ -152,6 +153,13 @@
       background-color: var(--header-bg);
       color: #ddd;
       font-size: 0.9rem;
+    }
+
+    /* Glowing tab hover animation */
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px var(--accent); }
+      50% { text-shadow: 0 0 12px var(--accent), 0 0 24px white; }
+      100% { text-shadow: 0 0 4px var(--accent); }
     }
 
   </style>
