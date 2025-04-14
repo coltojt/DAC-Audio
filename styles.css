@@ -89,16 +89,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.main-title {
-  font-family: 'Special Elite', monospace;
-  font-size: 3rem;
-  color: white; /* Text color */
-  text-align: center;
-  margin-bottom: 20px;
-
-  /* Green outline */
-  -webkit-text-stroke: 1.5px #4EFB00; /* Kawasaki Green outline */
-
-  /* Glowing effect */
-  text-shadow: 0 0 5px #4EFB00, 0 0 10px #4EFB00, 0 0 15px #4EFB00, 0 0 20px #4EFB00, 0 0 30px #4EFB00, 0 0 40px #4EFB00;
-}
