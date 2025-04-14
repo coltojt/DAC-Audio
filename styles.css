@@ -89,3 +89,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.tagline {
+  color: #4EFB00; /* Kawasaki Lime Green */
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
