@@ -1,0 +1,91 @@
+/* Variables */
+:root {
+  --background: #f2f0eb;
+  --text: #2e2e2e;
+  --accent: #4EFB00; /* Kawasaki Lime Green */
+  --header-bg: #1d1d1d;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --border: white;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: 'Special Elite', monospace;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+nav a {
+  font-family: 'Special Elite', monospace;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  background-color: #1f1f1f;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 4px var(--accent); }
+  50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
+  100% { text-shadow: 0 0 4px var(--accent); }
+}
+
+/* Header / Footer */
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  color: white;
+  font-size: 1.2em;
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+}
+
+/* Page Sections */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  box-shadow: 0 0 10px var(--shadow);
+  border-radius: 12px;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
