@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Analogue Creations – Handwired Tube Amplifiers & Audio Repair - Tulsa, Oklahoma</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --background: #fdf5e6; /* Pale butter yellow */
+      --background: #f2f0eb;
       --text: #2e2e2e;
-      --accent: #d10d6f; /* Electric fuchsia */
-      --header-bg: #183153; /* Deep teal blue */
-      --card-bg: #ffeb3b; /* Bright yellow */
-      --shadow: rgba(0, 0, 0, 0.1);
+      --accent: #39ff14; /* Kawasaki Green */
+      --header-bg: #1d1d1d;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -33,18 +33,17 @@
     header {
       background-color: var(--header-bg);
       color: #fff;
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
-      letter-spacing: 2px;
-      border-bottom: 5px solid var(--accent);
+      letter-spacing: 1px;
     }
 
     header h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 4rem;
+      font-family: 'Georgia', serif;
       margin-bottom: 10px;
       color: var(--accent);
-      text-transform: uppercase;
+      text-shadow: 1px 1px 0 #fff;
+      animation: glowPulse 3s infinite ease-in-out;
     }
 
     header h1 span {
@@ -64,37 +63,45 @@
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #ddd;
-      font-family: 'Rock Salt', cursive;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      color: #ccc;
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: var(--header-bg);
+      background-color: #1d1d1d;
       padding: 20px;
-      border-top: 5px solid var(--accent);
     }
 
     nav a {
-      font-family: 'Rock Salt', cursive;
-      color: var(--accent);
+      font-family: 'Special Elite', serif;
+      color: white;
       text-decoration: none;
-      padding: 12px 25px;
-      font-size: 1.2rem;
-      border: 2px solid var(--accent);
-      border-radius: 8px;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      border-radius: 6px;
       transition: all 0.3s ease;
-      text-transform: uppercase;
+      position: relative;
     }
 
     nav a:hover {
-      background-color: var(--accent);
-      color: white;
-      animation: glowPulse 1.2s infinite ease-in-out;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      background-color: #1f1f1f;
+      animation: glowPulse 3s infinite ease-in-out;
+    }
+
+    /* Glowing tab hover animation */
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px var(--accent); }
+      50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
+      100% { text-shadow: 0 0 4px var(--accent); }
+    }
+
+    .flash {
+      animation: flashEffect 0.2s ease-in-out;
     }
 
     main {
@@ -113,10 +120,11 @@
     }
 
     h2 {
-      font-family: 'Pacifico', cursive;
-      font-size: 2rem;
+      font-family: 'Georgia', serif;
+      font-size: 1.8rem;
       margin-bottom: 20px;
-      color: var(--header-bg);
+      color: var(--accent);
+      text-shadow: 1px 1px 0 #fff;
     }
 
     p {
@@ -151,17 +159,41 @@
       text-align: center;
       padding: 30px 20px;
       background-color: var(--header-bg);
-      color: #ddd;
+      color: #aaa;
       font-size: 0.9rem;
     }
 
-    /* Glowing tab hover animation */
-    @keyframes glowPulse {
-      0% { text-shadow: 0 0 4px var(--accent); }
-      50% { text-shadow: 0 0 12px var(--accent), 0 0 24px white; }
-      100% { text-shadow: 0 0 4px var(--accent); }
+    /* Flash-on-click effect */
+    @keyframes flashEffect {
+      0% { background-color: rgba(0, 255, 0, 0.3); }
+      100% { background-color: transparent; }
     }
 
+    /* CRT flicker background (optional) */
+    body.crt::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.01),
+        rgba(255, 255, 255, 0.01) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 1000;
+      animation: crtFlicker 0.3s infinite;
+    }
+
+    @keyframes crtFlicker {
+      0% { opacity: 0.03; }
+      50% { opacity: 0.07; }
+      100% { opacity: 0.03; }
+    }
   </style>
 </head>
 <body>
