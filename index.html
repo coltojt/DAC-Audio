@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Analogue Creations – Handwired Tube Amplifiers & Audio Repair - Tulsa, Oklahoma</title>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
- :root {
-  --background: #f2f0eb;
-  --text: #2e2e2e;
-  --accent: #ff4040; /* Coral Red */
-  --header-bg: #1d1d1d;
-  --card-bg: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.08);
-}
+  <style>
+    :root {
+      --background: #f2f0eb;
+      --text: #2e2e2e;
+      --accent: #ff4040; /* Coral Red */
+      --header-bg: #1d1d1d;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -69,7 +72,7 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: #1d1d1d;
+      background-color: var(--header-bg);
       padding: 20px;
     }
 
@@ -91,7 +94,6 @@
       animation: glowPulse 3s infinite ease-in-out;
     }
 
-    /* Glowing tab hover animation */
     @keyframes glowPulse {
       0% { text-shadow: 0 0 4px var(--accent); }
       50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
@@ -161,13 +163,11 @@
       font-size: 0.9rem;
     }
 
-    /* Flash-on-click effect */
     @keyframes flashEffect {
       0% { background-color: rgba(0, 255, 0, 0.3); }
       100% { background-color: transparent; }
     }
 
-    /* CRT flicker background (optional) */
     body.crt::before {
       content: '';
       position: fixed;
