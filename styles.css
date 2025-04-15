@@ -47,7 +47,11 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent);
+nav a:nth-child(1) { color: red; }
+nav a:nth-child(2) { color: black; }
+nav a:nth-child(3) { color: green; }
+nav a:nth-child(4) { color: blue; }
+nav a:nth-child(5) { color: orange; }
   border: 2px solid var(--accent);
   background-color: #1f1f1f;
   animation: glowPulse 3s infinite ease-in-out;
