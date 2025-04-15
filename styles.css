@@ -45,18 +45,22 @@ nav a {
   transition: all 0.3s ease;
   position: relative;
 }
+
+/* Individual link colors */
+.nav-about {
+  color: black;
+}
+
 .nav-services {
-  color: #f4a261;
+  color: #f4a261; /* Retro orange */
 }
+
 .nav-creations {
-  color: #457b9d;
+  color: #457b9d; /* Retro blue */
 }
+
 .nav-contact {
-  color: #e63946;
-}
-.nav-contact {
-  color: #e63946;
-}
+  color: #e63946; /* Retro red */
   border: 2px solid var(--accent);
   background-color: #1f1f1f;
   animation: glowPulse 3s infinite ease-in-out;
