@@ -44,25 +44,50 @@ nav a {
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-bottom: 2px solid var(--border);
 }
-nav a.nav-home:hover {
+
+nav a {
+  font-family: 'Special Elite', monospace;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+/* Assign custom --accent color per tab */
+nav a.nav-home {
   --accent: black;
 }
-nav a.nav-services:hover {
-  --accent: #f4a261;
+nav a.nav-services,
+nav a.nav-parts,
+nav a.nav-policies {
+  --accent: #f4a261; /* Retro orange */
 }
-nav a.nav-parts:hover {
-  --accent: #f4a261;
+nav a.nav-creations {
+  --accent: #457b9d; /* Retro blue */
 }
-nav a.nav-creations:hover {
-  --accent: #457b9d;
+nav a.nav-contact {
+  --accent: #e63946; /* Retro red */
 }
-nav a.nav-policies:hover {
-  --accent: #f4a261;
+
+/* Glow on hover using each tab's --accent */
+nav a:hover {
+  animation: glowPulse 3s infinite ease-in-out;
+  text-shadow: 0 0 4px var(--accent);
+  border: 2px solid var(--accent);
+  background-color: #1f1f1f;
 }
-nav a.nav-contact:hover {
-  --accent: #e63946;
-}
+
 nav a:hover {
   animation: glowPulse 3s infinite ease-in-out;
   text-shadow: 0 0 4px var(--accent);
