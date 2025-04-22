@@ -45,23 +45,22 @@ nav a {
   transition: all 0.3s ease;
   position: relative;
 }
-
-.nav-home:hover {
+nav a.nav-home:hover {
   --accent: black;
 }
-.nav-services:hover {
+nav a.nav-services:hover {
   --accent: #f4a261;
 }
-.nav-parts:hover {
+nav a.nav-parts:hover {
   --accent: #f4a261;
 }
-.nav-creations:hover {
+nav a.nav-creations:hover {
   --accent: #457b9d;
 }
-.nav-policies:hover {
+nav a.nav-policies:hover {
   --accent: #f4a261;
 }
-.nav-contact:hover {
+nav a.nav-contact:hover {
   --accent: #e63946;
 }
 nav a:hover {
