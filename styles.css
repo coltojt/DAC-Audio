@@ -46,26 +46,12 @@ nav a {
   position: relative;
 }
 
-/* Individual link colors */
-.nav-about {
-  color: black;
-}
-
-.nav-services {
-  color: #f4a261; /* Retro orange */
-}
-
-.nav-creations {
-  color: #457b9d; /* Retro blue */
-}
-
-.nav-contact {
-  color: #e63946; /* Retro red */
+nav a:hover {
+  animation: glowPulse 3s infinite ease-in-out;
+  text-shadow: 0 0 4px var(--accent);
   border: 2px solid var(--accent);
   background-color: #1f1f1f;
-  animation: glowPulse 3s infinite ease-in-out;
 }
-
 @keyframes glowPulse {
   0% { text-shadow: 0 0 4px var(--accent); }
   50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
