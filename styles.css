@@ -46,6 +46,24 @@ nav a {
   position: relative;
 }
 
+.nav-home:hover {
+  --accent: black;
+}
+.nav-services:hover {
+  --accent: #f4a261;
+}
+.nav-parts:hover {
+  --accent: #f4a261;
+}
+.nav-creations:hover {
+  --accent: #457b9d;
+}
+.nav-policies:hover {
+  --accent: #f4a261;
+}
+.nav-contact:hover {
+  --accent: #e63946;
+}
 nav a:hover {
   animation: glowPulse 3s infinite ease-in-out;
   text-shadow: 0 0 4px var(--accent);
