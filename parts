@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Digital Analogue Creations</title>
+</head>
+<body>
+  <header>
+    <h1>
+      <span class="line1">Digital Analogue Creations</span>
+    </h1>
+    <p>Where vintage audio meets modern precision.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="parts.html">Parts</a>
+    <a href="creations.html">Creations</a>
+    <a href="policies.html">Policies</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Parts & Components</h2>
+      <p>I have access to a wide array of electronics parts and components for everything from antique radios to guitars and beyond at a pricepoint that cannot be beat. Let me handle the procurement and shipping, support local and don't hesitate to contact me for what you need. </p>
+     
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Digital Analogue Creations, LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
