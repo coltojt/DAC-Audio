@@ -98,15 +98,6 @@ section p {
   font-size: 1.05rem;
 }
 
-/* Generic links */
-a {
-  color: var(--accent);
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 /* NAV BAR (desktop/base) */
 nav {
   display: flex;
