@@ -118,26 +118,6 @@ nav a {
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
-}
-
-/* Per-tab accent color (used by glow) */
-nav a.nav-home {
-  --accent: black;
-}
-
-nav a.nav-services,
-nav a.nav-parts,
-nav a.nav-policies {
-  --accent: #f4a261; /* Retro orange */
-}
-
-nav a.nav-creations {
-  --accent: #457b9d; /* Retro blue */
-}
-
-nav a.nav-contact {
-  --accent: #e63946; /* Retro red */
-}
 
 /* Glow on hover using each tab's --accent */
 nav a:hover {
