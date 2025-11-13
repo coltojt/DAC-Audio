@@ -102,6 +102,17 @@ a:hover {
   text-decoration: none;
 }
 
+/* NAV BAR (desktop/base) */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
 /* ===== UNIFIED NAV TAB STYLING ===== */
 nav a,
 nav a:link,
@@ -130,6 +141,22 @@ nav a:focus {
   0%   { text-shadow: 0 0 4px var(--accent); }
   50%  { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
   100% { text-shadow: 0 0 4px var(--accent); }
+}
+/* REMOVE these global rules: */
+/* a { color: var(--accent); } */
+/* a:hover { text-decoration: none; } */
+
+/* Content links only */
+main p a,
+main li a,
+main .content a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+main p a:hover,
+main li a:hover,
+main .content a:hover {
+  text-decoration: none;
 }
 
 /* ========== MOBILE TWEAKS ========== */
