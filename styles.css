@@ -160,33 +160,21 @@ main .content a:hover {
 
 /* Tablets and down */
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
+  body { padding: 10px; }
 
-  header {
-    padding: 24px 12px;
-  }
-
+  header { padding: 24px 12px; }
   header h1 .line1 { font-size: 2.2rem; }
   header h1 .line2 { font-size: 1.6rem; }
   header h1 .line3 { font-size: 1.2rem; }
 
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 12px;
-  }
+  nav { flex-wrap: wrap; gap: 10px; padding: 12px; }
+  nav a { padding: 8px 12px; font-size: 0.9rem; }
 
-  nav a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
+  main { margin: 20px auto; padding: 16px; }
 
-  main {
-    margin: 20px auto;
-    padding: 16px;
-  }
+  /* Force body text left on mobile */
+  section, section p, section li { text-align: left; }
+}  /* <-- CLOSES 768px BLOCK */
 
 /* Small phones */
 @media (max-width: 480px) {
@@ -200,8 +188,8 @@ main .content a:hover {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  nav a { flex: 0 0 auto; white-space: nowrap; }
+}  /* <-- CLOSES 480px BLOCK */
 
-  nav a {
-    flex: 0 0 auto;
     white-space: nowrap;
   }
