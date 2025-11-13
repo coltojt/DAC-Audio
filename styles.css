@@ -66,9 +66,9 @@ header p {
   font-size: 1rem;
   color: #ccc;
 }
-/* Home page brand styling */
-body.home .brand {
-  color: var(--accent);                  /* Kawasaki green */
+/* Brand text — green on every page */
+.brand {
+  color: var(--accent);
   font-family: 'Special Elite', monospace;
 }
 
@@ -192,7 +192,6 @@ main .content a:hover {
   section {
     text-align: center;
   }
-} /* <-- this was missing */
 
 /* Small phones */
 @media (max-width: 480px) {
@@ -211,4 +210,3 @@ main .content a:hover {
     flex: 0 0 auto;
     white-space: nowrap;
   }
-}
