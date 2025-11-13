@@ -188,11 +188,6 @@ main .content a:hover {
     padding: 16px;
   }
 
-  /* Center section content only on mobile */
-  section {
-    text-align: center;
-  }
-
 /* Small phones */
 @media (max-width: 480px) {
   header h1 .line1 { font-size: 1.8rem; }
