@@ -66,6 +66,12 @@ header p {
   font-size: 1rem;
   color: #ccc;
 }
+{
+/* Home page brand styling */
+body.home .brand {
+  color: var(--accent);                  /* Kawasaki green */
+  font-family: 'Special Elite', monospace;
+}
 
 /* Page Sections */
 main {
