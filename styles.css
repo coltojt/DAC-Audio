@@ -165,17 +165,9 @@ nav a:hover {
     padding: 24px 12px;
   }
 
-  header h1 .line1 {
-    font-size: 2.2rem;
-  }
-
-  header h1 .line2 {
-    font-size: 1.6rem;
-  }
-
-  header h1 .line3 {
-    font-size: 1.2rem;
-  }
+  header h1 .line1 { font-size: 2.2rem; }
+  header h1 .line2 { font-size: 1.6rem; }
+  header h1 .line3 { font-size: 1.2rem; }
 
   nav {
     flex-wrap: wrap;
@@ -192,23 +184,18 @@ nav a:hover {
     margin: 20px auto;
     padding: 16px;
   }
-    section {
+
+  /* Center section content only on mobile */
+  section {
     text-align: center;
-}
+  }
+} /* <-- this was missing */
 
 /* Small phones */
 @media (max-width: 480px) {
-  header h1 .line1 {
-    font-size: 1.8rem;
-  }
-
-  header h1 .line2 {
-    font-size: 1.3rem;
-  }
-
-  header h1 .line3 {
-    font-size: 1rem;
-  }
+  header h1 .line1 { font-size: 1.8rem; }
+  header h1 .line2 { font-size: 1.3rem; }
+  header h1 .line3 { font-size: 1rem; }
 
   /* Make the tab bar horizontally scrollable */
   nav {
@@ -218,7 +205,7 @@ nav a:hover {
   }
 
   nav a {
-    flex: 0 0 auto;      /* don’t shrink, stay tab-sized */
-    white-space: nowrap; /* keep each tab on one line */
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }
