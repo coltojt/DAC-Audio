@@ -109,15 +109,10 @@ nav {
   border-bottom: 2px solid var(--border);
 }
 
-nav a {
-  font-family: 'Special Elite', monospace;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  position: relative;
+nav a.nav-home {
+  --accent: var(--accent); /* uses #4EFB00 from :root */
+  /* or: --accent: #4EFB00; */
+}
 
 /* Glow on hover using each tab's --accent */
 nav a:hover {
