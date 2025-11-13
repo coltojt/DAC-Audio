@@ -1,22 +1,22 @@
-/* Variables */
+/* ========== Variables ========== */
 :root {
   --background: #f2f0eb;
   --text: #2e2e2e;
-  --accent: #4EFB00; /* Kawasaki Lime Green */
+  --accent: #4EFB00; /* Default Kawasaki Lime Green */
   --header-bg: #1d1d1d;
   --card-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08);
   --border: white;
 }
 
-/* Global Reset */
+/* ========== Global Reset ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Typography */
+/* ========== Typography & Layout ========== */
 body {
   font-family: 'Special Elite', monospace;
   background-color: var(--background);
@@ -25,7 +25,81 @@ body {
   padding: 20px;
 }
 
-/* Navigation Bar */
+/* Header / Footer */
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  color: white;
+  font-size: 1.2em;
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+}
+
+/* Header title styling (for index hero) */
+header h1 {
+  color: var(--border);
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  display: block;
+}
+
+header h1 .line1 {
+  font-size: 3rem;
+}
+
+header h1 .line2 {
+  font-size: 2rem;
+}
+
+header h1 .line3 {
+  font-size: 1.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Page Sections */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  box-shadow: 0 0 10px var(--shadow);
+  border-radius: 12px;
+}
+
+section {
+  text-align: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+section p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+/* Generic links */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ========== NAV BAR & TABS ========== */
 nav {
   display: flex;
   justify-content: center;
@@ -46,18 +120,21 @@ nav a {
   position: relative;
 }
 
-/* Assign custom --accent color per tab */
+/* Per-tab accent color (used by glow) */
 nav a.nav-home {
   --accent: black;
 }
+
 nav a.nav-services,
 nav a.nav-parts,
 nav a.nav-policies {
   --accent: #f4a261; /* Retro orange */
 }
+
 nav a.nav-creations {
   --accent: #457b9d; /* Retro blue */
 }
+
 nav a.nav-contact {
   --accent: #e63946; /* Retro red */
 }
@@ -71,46 +148,19 @@ nav a:hover {
 }
 
 @keyframes glowPulse {
-  0% { text-shadow: 0 0 4px var(--accent); }
-  50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
+  0%   { text-shadow: 0 0 4px var(--accent); }
+  50%  { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
   100% { text-shadow: 0 0 4px var(--accent); }
 }
 
-/* Header / Footer */
-header, footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--header-bg);
-  color: white;
-  font-size: 1.2em;
-  border-top: 2px solid var(--border);
-  border-bottom: 2px solid var(--border);
-}
-
-/* Page Sections */
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: var(--card-bg);
-  border: 2px solid var(--border);
-  box-shadow: 0 0 10px var(--shadow);
-  border-radius: 12px;
-}
-
-/* Links */
-a {
-  color: var(--accent);
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* ===== Mobile tweaks ===== */
+/* ========== MOBILE TWEAKS ========== */
 
 /* Tablets and down */
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
   header {
     padding: 24px 12px;
   }
@@ -142,10 +192,6 @@ a:hover {
     margin: 20px auto;
     padding: 16px;
   }
-
-  body {
-    padding: 10px;
-  }
 }
 
 /* Small phones */
@@ -162,14 +208,15 @@ a:hover {
     font-size: 1rem;
   }
 
+  /* Make the tab bar horizontally scrollable */
   nav {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   nav a {
-    text-align: center;
-    width: 100%;
+    flex: 0 0 auto;      /* don’t shrink, stay tab-sized */
+    white-space: nowrap; /* keep each tab on one line */
   }
 }
-
