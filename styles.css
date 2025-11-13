@@ -76,7 +76,7 @@ main {
 }
 
 section {
-  text-align: center;
+  text-align: left;
 }
 
 section h2 {
@@ -192,6 +192,8 @@ nav a:hover {
     margin: 20px auto;
     padding: 16px;
   }
+    section {
+    text-align: center;
 }
 
 /* Small phones */
