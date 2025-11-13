@@ -102,29 +102,30 @@ a:hover {
   text-decoration: none;
 }
 
-/* ========== NAV BAR & TABS ========== */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: var(--header-bg);
-  padding: 20px;
-  border-bottom: 2px solid var(--border);
+/* ===== UNIFIED NAV TAB STYLING ===== */
+nav a,
+nav a:link,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid transparent;  /* invisible border until hover */
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-nav a.nav-home {
-  --accent: var(--accent); /* uses #4EFB00 from :root */
-  /* or: --accent: #4EFB00; */
-}
-
-/* Glow on hover using each tab's --accent */
-nav a:hover {
+/* Hover/focus — glowing Kawasaki green pulse */
+nav a:hover,
+nav a:focus {
+  color: var(--accent);
   animation: glowPulse 3s infinite ease-in-out;
   text-shadow: 0 0 4px var(--accent);
   border: 2px solid var(--accent);
   background-color: #1f1f1f;
 }
 
+/* Pulse animation */
 @keyframes glowPulse {
   0%   { text-shadow: 0 0 4px var(--accent); }
   50%  { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
