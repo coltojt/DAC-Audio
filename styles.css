@@ -44,26 +44,8 @@ nav a {
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: var(--header-bg);
-  padding: 20px;
-  border-bottom: 2px solid var(--border);
 }
 
-nav a {
-  font-family: 'Special Elite', monospace;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  position: relative;
-}
 /* Assign custom --accent color per tab */
 nav a.nav-home {
   --accent: black;
@@ -88,12 +70,6 @@ nav a:hover {
   background-color: #1f1f1f;
 }
 
-nav a:hover {
-  animation: glowPulse 3s infinite ease-in-out;
-  text-shadow: 0 0 4px var(--accent);
-  border: 2px solid var(--accent);
-  background-color: #1f1f1f;
-}
 @keyframes glowPulse {
   0% { text-shadow: 0 0 4px var(--accent); }
   50% { text-shadow: 0 0 8px var(--accent), 0 0 16px white; }
@@ -130,3 +106,70 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+/* ===== Mobile tweaks ===== */
+
+/* Tablets and down */
+@media (max-width: 768px) {
+  header {
+    padding: 24px 12px;
+  }
+
+  header h1 .line1 {
+    font-size: 2.2rem;
+  }
+
+  header h1 .line2 {
+    font-size: 1.6rem;
+  }
+
+  header h1 .line3 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header h1 .line1 {
+    font-size: 1.8rem;
+  }
+
+  header h1 .line2 {
+    font-size: 1.3rem;
+  }
+
+  header h1 .line3 {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    text-align: center;
+    width: 100%;
+  }
+}
+
