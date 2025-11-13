@@ -24,7 +24,10 @@ body {
   line-height: 1.6;
   padding: 20px;
 }
-
+/* Override font for main body text only */
+main, section, p, li {
+  font-family: 'Georgia', serif;
+}
 /* Header / Footer */
 header,
 footer {
