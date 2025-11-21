@@ -193,13 +193,3 @@ main .content a:hover {
 
     white-space: nowrap;
   }
-* --------------------------
-   Rentals page custom styles
-   -------------------------- */
-
-/* Remove bullets ONLY from pricing list */
-.no-bullets {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
